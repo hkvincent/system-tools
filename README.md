@@ -5,7 +5,7 @@ These scripts are used to improve productivity
 # How to use video_duplicate_finder
 The script uses a recursive method to find duplicate video files. This means that if you provide the parent folder, it will locate the leaf file until the end.
 
-prerequisite:
+## prerequisite:
 1. **Install FFmpeg**:
    - Download FFmpeg from the [official website](https://ffmpeg.org/download.html).
    - Extract the downloaded files to a known location on your system.
@@ -29,3 +29,10 @@ The script recursively calculates the length of each video file by locating them
 python cal_length.py
 ```
 After typing the command above, you will be prompted to provide the path where you want to calculate its length.
+
+
+# for bat file
+those bat files are used in the task scheduler.
+![image](https://github.com/hkvincent/system-tools/assets/11677663/edf7a86b-b86e-4497-90b6-9c7431f89aa0)
+and import the bookmark.xml and batteryjob.xml to task scheduler
+
