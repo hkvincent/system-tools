@@ -31,8 +31,5 @@ python cal_length.py
 After typing the command above, you will be prompted to provide the path where you want to calculate its length.
 
 
-# for bat file
-those bat files are used in the task scheduler.
-![image](https://github.com/hkvincent/system-tools/assets/11677663/edf7a86b-b86e-4497-90b6-9c7431f89aa0)
-and import the bookmark.xml and batteryjob.xml to task scheduler
-
+# How to use the BAT file
+The BAT files are utilized in Windows Task Scheduler. To import `bookmark.xml` and `batteryjob.xml`, run the Task Scheduler.
