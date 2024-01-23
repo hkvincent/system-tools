@@ -1,0 +1,48 @@
+@ECHO OFF
+CLS
+
+IF "%~1"=="" (
+    ECHO Please provide the path as an argument.
+    ECHO Usage: %0 "path-to-maven-repo"
+    EXIT /B
+)
+
+SET "CLEAR_DIR=%~1"
+color 0a
+TITLE ClearLastUpdated for Windows
+
+:MENU
+CLS
+ECHO.
+ECHO. * * * *  ClearLastUpdated for Windows  * * * *
+ECHO. * *
+ECHO. * 1 Clear *.lastUpdated files *
+ECHO. * *
+ECHO. * 2 View *.lastUpdated files *
+ECHO. * *
+ECHO. * 3 Exit *
+ECHO. * *
+ECHO. * * * * * * * * * * * * * * * * * * * * * * * *
+ECHO.
+ECHO. Please enter the number of the option:
+set /p ID=
+IF "%ID%"=="1" GOTO cmd1
+IF "%ID%"=="2" GOTO cmd2
+IF "%ID%"=="3" EXIT
+GOTO MENU
+
+:cmd1
+ECHO. Starting clean-up...
+cd /d "%CLEAR_DIR%"
+for /r %%i in (*.lastUpdated) do del "%%i"
+ECHO. Clean-up complete.
+PAUSE
+GOTO MENU
+
+:cmd2
+ECHO. Viewing *.lastUpdated files...
+cd /d "%CLEAR_DIR%"
+for /r %%i in (*.lastUpdated) do echo %%i
+ECHO. Done.
+PAUSE
+GOTO MENU
